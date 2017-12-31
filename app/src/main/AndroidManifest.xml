@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aliak.dev.fastreading">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".FastReadingApp"
         android:allowBackup="true"
@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9759413d1bc04f5da178cdd21e8be46d10d06b3c" />
     </application>
 
 </manifest>
