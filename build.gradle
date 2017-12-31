@@ -12,12 +12,15 @@ buildscript {
         rxJavaVersion = '1.1.9'
         rxAndroidVersion = '1.2.1'
         databindingVersion = '2.3.3'
+        gradlePluginVersion = '3.0.1'
+        googleServicesVersion = '3.1.1'
+        fabricToolsVersion = '1.+'
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "com.android.tools.build:gradle:$gradlePluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'io.fabric.tools:gradle:1.+'
-        classpath 'com.google.gms:google-services:3.1.1'
+        classpath "io.fabric.tools:gradle:$fabricToolsVersion"
+        classpath "com.google.gms:google-services:$googleServicesVersion"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

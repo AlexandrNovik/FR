@@ -7,8 +7,9 @@ import rx.android.schedulers.AndroidSchedulers
 import javax.inject.Named
 import javax.inject.Singleton
 
+
 @Module
-class AppModule {
+abstract class AppModule {
     @Provides
     @Singleton
     @Named("main_thread")

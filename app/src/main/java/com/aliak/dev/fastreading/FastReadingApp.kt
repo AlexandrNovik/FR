@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatDelegate
 import com.aliak.dev.fastreading.di.AppComponent
 import com.aliak.dev.fastreading.di.DaggerAppComponent
 import com.crashlytics.android.Crashlytics
+import com.crashlytics.android.answers.Answers
 import io.fabric.sdk.android.Fabric
 
 /**
@@ -20,7 +21,7 @@ class FastReadingApp : Application() {
         appComponent = DaggerAppComponent.create()
         appComponent.inject(this)
 
-        Fabric.with(this, Crashlytics())
+        Fabric.with(this, Crashlytics(), Answers())
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
     }
 }
