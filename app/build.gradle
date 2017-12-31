@@ -16,7 +16,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             debuggable false
             buildConfigField "boolean", "ENABLE_FABRIC", "true"
@@ -29,7 +30,28 @@ android {
     dataBinding {
         enabled = true
     }
+    flavorDimensions "tier"
     productFlavors {
+        free {
+            dimension "tier"
+        }
+
+        paid {
+            dimension "tier"
+        }
+    }
+    sourceSets {
+        free {
+            java {
+                srcDirs = ['src/free/java']
+            }
+        }
+
+        paid {
+            java {
+                srcDirs = ['src/paid/java']
+            }
+        }
     }
 }
 crashlytics {
