@@ -1,16 +1,17 @@
 package com.aliak.dev.fastreading.ui
 
-import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import android.databinding.DataBindingUtil
 import com.aliak.dev.fastreading.R
+import com.aliak.dev.fastreading.databinding.ActivityMainBinding
+import com.aliak.dev.fastreading.databinding.ViewModelLifecycle
+import com.aliak.dev.fastreading.databinding.viewmodel.MainScreenViewModel
 
-import kotlinx.android.synthetic.main.activity_main.*
-
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseLifecycleActivity() {
+    override fun initViewModel(): ViewModelLifecycle {
+        val binding = DataBindingUtil
+                .setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        binding.viewModel = MainScreenViewModel()
+        return binding.viewModel
     }
+
 }

@@ -7,9 +7,6 @@ import rx.android.schedulers.AndroidSchedulers
 import javax.inject.Named
 import javax.inject.Singleton
 
-/**
- * @author Aliaksandr Novik
- */
 @Module
 class AppModule {
     @Provides

@@ -11,6 +11,7 @@ buildscript {
         daggerVersion = '2.9'
         rxJavaVersion = '1.1.9'
         rxAndroidVersion = '1.2.1'
+        databindingVersion = '2.3.3'
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
