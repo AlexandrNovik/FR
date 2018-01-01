@@ -33,6 +33,18 @@ allprojects {
         maven { url 'https://maven.google.com' }
         maven { url "https://jitpack.io" }
     }
+    ext {
+        applicationId = "com.aliak.dev.fastreading"
+
+        compileSdkVersion = 27
+        buildToolsVersion = "26.0.2"
+
+        minSdkVersion = 19
+        targetSdkVersion = 27
+
+        appVersionCode = 1
+        appVersionName = '1.0.0'
+    }
 }
 
 task clean(type: Delete) {

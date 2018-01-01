@@ -4,14 +4,24 @@ apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+final String VERSION_CODE = "versionCode"
+final String VERSION_NAME = "versionName"
+ext {
+    appVersionCode = Integer.valueOf(project.hasProperty(VERSION_CODE) ?
+            project.versionCode : new Date().format('yyMMddHHmm'))
+    appVersionName = project.hasProperty(VERSION_NAME) ?
+            project.versionName : "1.0.${appVersionCode}"
+}
 android {
-    compileSdkVersion 27
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.aliak.dev.fastreading"
-        minSdkVersion 19
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode appVersionCode
+        versionName appVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
