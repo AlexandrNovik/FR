@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Fast Reading</string>
+
+    <string name="training">Training</string>
+    <string name="training_program">Training program</string>
+    <string name="reading">Reading</string>
+    <string name="motivation">Motivation</string>
+
+    <string name="schulte">SCHULTE TABLE</string>
+    <string name="remember_the_number">REMEMBER THE NUMBER</string>
+    <string name="line_of_sight">LINE OF SIGHT</string>
+    <string name="speed_reading">SPEED READING</string>
+    <string name="word_pairs">WORD PAIRS</string>
+    <string name="even_numbers">EVEN NUMBERS</string>
+    <string name="green_dot">GREEN DOT</string>
+
 </resources>
 

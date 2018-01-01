@@ -1,6 +1,6 @@
 package com.aliak.dev.fastreading.domain
 
-interface PresenterLifecycle {
+interface LifecyclePresenter {
     fun initialize()
     fun resume()
     fun pause()

@@ -3,9 +3,9 @@ package com.aliak.dev.fastreading.ui.base
 import android.os.Bundle
 import com.afollestad.appthemeengine.ATE
 import com.aliak.dev.fastreading.R
-import com.aliak.dev.fastreading.domain.PresenterLifecycle
+import com.aliak.dev.fastreading.domain.LifecyclePresenter
 
-abstract class BaseLifecycleThemedActivity<Presenter : PresenterLifecycle> : BaseThemedActivity() {
+abstract class BaseLifecycleThemedActivity<Presenter : LifecyclePresenter> : BaseThemedActivity() {
     lateinit var presenter: Presenter
     abstract fun initPresenter(): Presenter
     abstract fun initView()

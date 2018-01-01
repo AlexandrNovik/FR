@@ -8,5 +8,6 @@ import android.content.Context
 interface Router {
     interface Main{
         fun navigateSettings(context: Context)
+        fun navigateTraining(context: Context)
     }
 }

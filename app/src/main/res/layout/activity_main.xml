@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.aliak.dev.fastreading.ui.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -18,8 +19,77 @@
             android:elevation="@dimen/toolbar_elevation"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:contentInsetStart="@dimen/content_inset"
-            app:popupTheme="?toolbar_popup_theme" />
+            app:popupTheme="?toolbar_popup_theme">
+
+            <TextView
+                android:id="@+id/main_toolbar_text"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_training"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/CardText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/training" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/main_training_program"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/CardText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/training_program" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/main_reading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/CardText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/reading" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/main_motivation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/CardText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/motivation" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
