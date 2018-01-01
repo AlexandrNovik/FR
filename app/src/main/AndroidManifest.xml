@@ -14,14 +14,17 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:resizeableActivity="true"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:resizeableActivity="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="@string/settings"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="9759413d1bc04f5da178cdd21e8be46d10d06b3c" />

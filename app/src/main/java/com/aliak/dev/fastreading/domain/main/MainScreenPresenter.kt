@@ -1,12 +1,14 @@
-package com.aliak.dev.fastreading.databinding.viewmodel
+package com.aliak.dev.fastreading.domain.main
 
+import android.content.Intent
 import android.view.View
 import com.aliak.dev.fastreading.FastReadingApp
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter
-import com.aliak.dev.fastreading.databinding.ViewModelLifecycle
+import com.aliak.dev.fastreading.domain.PresenterLifecycle
+import com.aliak.dev.fastreading.ui.settings.SettingsActivity
 import javax.inject.Inject
 
-class MainScreenViewModel : ViewModelLifecycle {
+class MainScreenPresenter : PresenterLifecycle {
     @Inject lateinit var analytics: AnalyticsReporter
 
     init {
@@ -27,9 +29,5 @@ class MainScreenViewModel : ViewModelLifecycle {
 
     override fun release() {
 
-    }
-
-    fun onNewPasswordClick(view: View) {
-        analytics.reportNavigationSettings()
     }
 }

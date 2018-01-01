@@ -27,9 +27,7 @@ android {
             buildConfigField "boolean", "ENABLE_FABRIC", "false"
         }
     }
-    dataBinding {
-        enabled = true
-    }
+
     flavorDimensions "tier"
     productFlavors {
         free {
@@ -64,9 +62,11 @@ kapt {
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    paidImplementation project(':library')
+    freeImplementation project(':library')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    kapt "com.android.databinding:compiler:$databindingVersion"
     implementation "com.google.dagger:dagger:$daggerVersion"
     implementation "io.reactivex:rxjava:$rxJavaVersion"
     implementation "io.reactivex:rxandroid:$rxAndroidVersion"
@@ -81,6 +81,12 @@ dependencies {
     }
     implementation 'com.google.firebase:firebase-core:11.4.2'
     implementation('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true
+    }
+    implementation('com.github.afollestad.material-dialogs:core:0.8.5.4@aar') {
+        transitive = true
+    }
+    implementation('com.github.afollestad.material-dialogs:commons:0.8.5.4@aar') {
         transitive = true
     }
     testImplementation 'junit:junit:4.12'
