@@ -5,9 +5,9 @@ import com.afollestad.appthemeengine.ATE
 import com.aliak.dev.fastreading.R
 import com.aliak.dev.fastreading.domain.PresenterLifecycle
 
-abstract class BaseLifecycleThemedActivity : BaseThemedActivity() {
-    lateinit var presenter: PresenterLifecycle
-    abstract fun initPresenter(): PresenterLifecycle
+abstract class BaseLifecycleThemedActivity<Presenter : PresenterLifecycle> : BaseThemedActivity() {
+    lateinit var presenter: Presenter
+    abstract fun initPresenter(): Presenter
     abstract fun initView()
     abstract fun getResId(): Int
     override fun onCreate(savedInstanceState: Bundle?) {

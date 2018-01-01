@@ -18,7 +18,7 @@
     </com.afollestad.appthemeengine.prefs.ATEPreferenceCategory>
 
     <com.afollestad.appthemeengine.prefs.ATEPreferenceCategory
-        android:title="@string/ate_colors"
+        android:title="@string/colors"
         app:ateKey_prefCategory_textColor="?ate_key">
 
         <com.afollestad.appthemeengine.prefs.ATEColorPreference

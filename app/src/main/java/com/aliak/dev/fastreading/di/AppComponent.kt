@@ -7,7 +7,12 @@ import javax.inject.Singleton
 
 
 @Singleton
-@Component(modules = [AppModule::class, AnalyticsReporterModule::class])
+@Component(
+        modules = [
+        AppModule::class,
+        AnalyticsReporterModule::class,
+        RouterModule::class
+        ])
 interface AppComponent {
     fun inject(app: FastReadingApp)
     fun inject(presenter: MainScreenPresenter)
