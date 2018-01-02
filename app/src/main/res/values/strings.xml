@@ -1,18 +1,20 @@
 <resources>
     <string name="app_name">Fast Reading</string>
 
+    <!--Main screen-->
     <string name="training">Training</string>
     <string name="training_program">Training program</string>
     <string name="reading">Reading</string>
     <string name="motivation">Motivation</string>
 
-    <string name="schulte">SCHULTE TABLE</string>
-    <string name="remember_the_number">REMEMBER THE NUMBER</string>
-    <string name="line_of_sight">LINE OF SIGHT</string>
-    <string name="speed_reading">SPEED READING</string>
-    <string name="word_pairs">WORD PAIRS</string>
-    <string name="even_numbers">EVEN NUMBERS</string>
-    <string name="green_dot">GREEN DOT</string>
+    <!--Training screen-->
+    <string name="lbl_schulte">Schulte table</string>
+    <string name="lbl_remember_the_number">Remember the number</string>
+    <string name="lbl_line_of_sight">Line of sight</string>
+    <string name="lbl_speed_reading">Speed reading</string>
+    <string name="lbl_word_pairs">Word pairs</string>
+    <string name="lbl_even_numbers">Even numbers</string>
+    <string name="lbl_green_dot">Green dot</string>
 
 </resources>
 

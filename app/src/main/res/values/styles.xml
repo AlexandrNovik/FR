@@ -34,4 +34,10 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
     </style>
+
+    <style name="ToolbarText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:gravity">center|center_vertical</item>
+    </style>
+
 </resources>
