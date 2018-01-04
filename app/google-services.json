@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1042225794599",
+    "firebase_url": "https://fast-reading-2a883.firebaseio.com",
+    "project_id": "fast-reading-2a883",
+    "storage_bucket": "fast-reading-2a883.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042225794599:android:dd1ccc5af5bf894c",
+        "android_client_info": {
+          "package_name": "com.aliak.dev.fastreading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042225794599-2honuqb7f5h3ju7nplflt5rm295r2vv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKoRGMX-IZzyrjEnhLBPowAHsawi1xogw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
