@@ -19,9 +19,8 @@ class TrainingActivity : BaseLifecycleThemedActivity<TrainingContract.Presenter>
 
     override fun initView() {
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        training_toolbar_text.text = getString(R.string.training)
+        supportActionBar?.title = getString(R.string.training)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -31,8 +31,7 @@ class MainActivity : BaseLifecycleThemedActivity<MainContract.Presenter>() {
 
     override fun initView() {
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-        main_toolbar_text.text = getString(R.string.app_name)
+        supportActionBar?.title = getString(R.string.app_name)
 
         main_training.click { presenter.navigateTraining(this@MainActivity) }
         main_training_program.click { presenter.navigateTrainingProgram(this@MainActivity) }
