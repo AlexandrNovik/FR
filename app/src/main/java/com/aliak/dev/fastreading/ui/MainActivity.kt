@@ -2,8 +2,6 @@ package com.aliak.dev.fastreading.ui
 
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import com.afollestad.appthemeengine.Config
 import com.aliak.dev.fastreading.R
 import com.aliak.dev.fastreading.domain.main.MainScreenPresenter
 import com.aliak.dev.fastreading.mvp.MainContract
@@ -37,11 +35,9 @@ class MainActivity : BaseLifecycleThemedActivity<MainContract.Presenter>() {
         main_training_program.click { presenter.navigateTrainingProgram(this@MainActivity) }
         main_reading.click { presenter.navigateReading(this@MainActivity) }
         main_motivation.click { presenter.navigateMotivation(this@MainActivity) }
+        main_training_text.setAccentTextColor()
+        main_training_program_text.setAccentTextColor()
+        main_reading_text.setAccentTextColor()
+        main_motivation_text.setAccentTextColor()
     }
-
-    private fun View.setAccentBackground() {
-        this.setBackgroundColor(Config.accentColor(this@MainActivity, ateKey))
-    }
-
-
 }

@@ -1,7 +1,10 @@
 package com.aliak.dev.fastreading.ui.base
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import com.afollestad.appthemeengine.ATE
+import com.afollestad.appthemeengine.Config
 import com.aliak.dev.fastreading.R
 import com.aliak.dev.fastreading.domain.LifecyclePresenter
 
@@ -51,4 +54,14 @@ abstract class BaseLifecycleThemedActivity<Presenter : LifecyclePresenter> : Bas
         super.onDestroy()
         presenter.release()
     }
+
+    protected fun View.setAccentBackground() {
+        this.setBackgroundColor(Config.accentColor(this@BaseLifecycleThemedActivity, ateKey))
+    }
+
+    protected fun TextView.setAccentTextColor() {
+        this.setTextColor(Config.accentColor(this@BaseLifecycleThemedActivity, ateKey))
+    }
+
+    protected fun getAccentColor() = Config.accentColor(this@BaseLifecycleThemedActivity, ateKey)
 }

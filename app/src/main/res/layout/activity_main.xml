@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context="com.aliak.dev.fastreading.ui.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aliak.dev.fastreading.ui.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,8 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:elevation="@dimen/toolbar_elevation"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="?toolbar_popup_theme">
-        </android.support.v7.widget.Toolbar>
+            app:popupTheme="?toolbar_popup_theme"></android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -39,13 +38,14 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/bg_motivation" />
+                android:src="@drawable/bg_training" />
 
             <TextView
+                android:id="@+id/main_training_text"
                 style="@style/CardText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/training"/>
+                android:text="@string/training" />
         </FrameLayout>
 
         <FrameLayout
@@ -59,13 +59,14 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/bg_training" />
+                android:src="@drawable/bg_training_program" />
 
             <TextView
+                android:id="@+id/main_training_program_text"
                 style="@style/CardText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/training_program"/>
+                android:text="@string/training_program" />
         </FrameLayout>
 
         <FrameLayout
@@ -79,13 +80,14 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/bg_training_program" />
+                android:src="@drawable/bg_reading" />
 
             <TextView
+                android:id="@+id/main_reading_text"
                 style="@style/CardText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/reading"/>
+                android:text="@string/reading" />
         </FrameLayout>
 
         <FrameLayout
@@ -99,13 +101,14 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/bg_reading" />
+                android:src="@drawable/bg_motivation" />
 
             <TextView
+                android:id="@+id/main_motivation_text"
                 style="@style/CardText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/motivation"/>
+                android:text="@string/motivation" />
         </FrameLayout>
     </LinearLayout>
 
