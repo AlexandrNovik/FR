@@ -34,6 +34,13 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_motivation" />
+
             <TextView
                 style="@style/CardText"
                 android:layout_width="match_parent"
@@ -46,6 +53,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_training" />
 
             <TextView
                 style="@style/CardText"
@@ -60,6 +74,13 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_training_program" />
+
             <TextView
                 style="@style/CardText"
                 android:layout_width="match_parent"
@@ -72,6 +93,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_reading" />
 
             <TextView
                 style="@style/CardText"
