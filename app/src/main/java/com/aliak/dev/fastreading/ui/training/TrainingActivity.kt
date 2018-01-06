@@ -10,6 +10,7 @@ import com.aliak.dev.fastreading.domain.training.TrainingPresenter
 import com.aliak.dev.fastreading.mvp.TrainingContract
 import com.aliak.dev.fastreading.ui.base.BaseLifecycleThemedActivity
 import kotlinx.android.synthetic.main.activity_training.*
+import rx.subscriptions.CompositeSubscription
 import javax.inject.Inject
 
 /**
@@ -26,6 +27,8 @@ class TrainingActivity : BaseLifecycleThemedActivity<TrainingContract.Presenter>
 
     override fun getResId(): Int = R.layout.activity_training
 
+    private val subscription = CompositeSubscription()
+
     override fun initView() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -35,7 +38,6 @@ class TrainingActivity : BaseLifecycleThemedActivity<TrainingContract.Presenter>
                 getAccentColor(),
                 dataProvider.provideItems(this))
         activity_training_list.layoutManager = LinearLayoutManager(this)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -49,5 +51,18 @@ class TrainingActivity : BaseLifecycleThemedActivity<TrainingContract.Presenter>
             android.R.id.home -> onBackPressed()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val adapterClickSub = (activity_training_list.adapter as TrainingAdapter)
+                .observeClickedItem()
+                .subscribe({ presenter.itemClick(it, this@TrainingActivity) })
+        subscription.add(adapterClickSub)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        subscription.clear()
     }
 }

@@ -13,8 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/app_name"
-            android:resizeableActivity="true">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,12 +23,13 @@
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:label="@string/settings"
-            android:resizeableActivity="true"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".ui.training.TrainingActivity"
-            android:label="@string/training"
-            android:resizeableActivity="true" />
+            android:label="@string/training" />
+        <activity
+            android:name=".ui.training.SchulteActivity"
+            android:label="@string/training" />
 
         <meta-data
             android:name="io.fabric.ApiKey"

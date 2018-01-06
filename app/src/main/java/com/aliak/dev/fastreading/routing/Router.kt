@@ -6,8 +6,12 @@ import android.content.Context
  * @author Aliaksandr Novik
  */
 interface Router {
-    interface Main{
+    interface Main {
         fun navigateSettings(context: Context)
         fun navigateTraining(context: Context)
+    }
+
+    interface Training {
+        fun navigateSchulteTraining(context: Context)
     }
 }

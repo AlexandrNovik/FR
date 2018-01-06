@@ -106,7 +106,7 @@ abstract class BaseAdapter<Model, Holder : BaseAdapter.AdapterViewHolder<Model>>
         notifyItemInserted(itemCount - 1)
     }
 
-    fun observeClickedItem(): Observable<Model> = itemClickSubject
+    fun observeClickedItem(): Observable<Model> = itemClickSubject.asObservable()
 
     abstract class AdapterViewHolder<in Model>(view: View) : RecyclerView.ViewHolder(view) {
         abstract fun bind(item: Model, position: Int)
