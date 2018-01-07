@@ -9,6 +9,7 @@ import com.aliak.dev.fastreading.domain.training.TrainingItemsProvider
 import com.aliak.dev.fastreading.domain.training.TrainingPresenter
 import com.aliak.dev.fastreading.mvp.TrainingContract
 import com.aliak.dev.fastreading.ui.base.BaseLifecycleThemedActivity
+import com.aliak.dev.fastreading.ui.training.adapter.TrainingAdapter
 import kotlinx.android.synthetic.main.activity_training.*
 import rx.subscriptions.CompositeSubscription
 import javax.inject.Inject

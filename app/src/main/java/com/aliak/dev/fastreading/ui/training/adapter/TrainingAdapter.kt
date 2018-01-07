@@ -1,4 +1,4 @@
-package com.aliak.dev.fastreading.ui.training
+package com.aliak.dev.fastreading.ui.training.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import com.aliak.dev.fastreading.R
 import com.aliak.dev.fastreading.data.TrainingModel
 import com.aliak.dev.fastreading.ui.base.BaseAdapter
+import com.aliak.dev.fastreading.ui.training.holder.TrainingViewHolder
 
 /**
  * @author Aliaksandr Novik

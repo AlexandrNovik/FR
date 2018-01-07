@@ -21,9 +21,7 @@ class FastReadingApp : Application() {
         appComponent = DaggerAppComponent.create()
         appComponent.inject(this)
 
-        if (!BuildConfig.DEBUG) {
-            Fabric.with(this, Crashlytics(), Answers())
-        }
+        Fabric.with(this, Crashlytics(), Answers())
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
     }
 }

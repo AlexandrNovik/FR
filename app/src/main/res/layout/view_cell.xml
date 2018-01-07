@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/cell_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/cell_text"
+        style="@style/CellText"
+        android:background="@drawable/md_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="20" />
+
+</FrameLayout>

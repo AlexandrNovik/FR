@@ -1,4 +1,4 @@
-package com.aliak.dev.fastreading.ui.training
+package com.aliak.dev.fastreading.ui.training.holder
 
 import android.view.View
 import com.aliak.dev.fastreading.data.TrainingModel
@@ -8,7 +8,8 @@ import kotlinx.android.synthetic.main.view_training_item.view.*
 /**
  * @author Aliaksandr Novik
  */
-class TrainingViewHolder(val view: View, val accentColor: Int) : BaseAdapter.AdapterViewHolder<TrainingModel>(view) {
+class TrainingViewHolder(val view: View, val accentColor: Int)
+    : BaseAdapter.AdapterViewHolder<TrainingModel>(view) {
     override fun bind(item: TrainingModel, position: Int) {
         view.training_item_text.text = item.title.toUpperCase()
         view.training_item_text.setTextColor(accentColor)
