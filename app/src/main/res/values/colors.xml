@@ -9,4 +9,6 @@
 
     <color name="colorPrimaryDarkDefault">#37474F</color>
     <color name="colorAccentDarkDefault">#2196F3</color>
+    <color name="colorGreen">#5eaf43</color>
+    <color name="colorRed">#df3a3a</color>
 </resources>

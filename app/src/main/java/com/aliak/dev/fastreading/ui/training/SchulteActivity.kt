@@ -2,7 +2,7 @@ package com.aliak.dev.fastreading.ui.training
 
 import android.support.v7.widget.GridLayoutManager
 import com.aliak.dev.fastreading.R
-import com.aliak.dev.fastreading.domain.training.SchultePresenter
+import com.aliak.dev.fastreading.domain.training.schulte.SchultePresenter
 import com.aliak.dev.fastreading.mvp.SchulteContract
 import com.aliak.dev.fastreading.ui.base.BaseLifecycleThemedActivity
 import com.aliak.dev.fastreading.ui.training.adapter.SchulteTableAdapter
