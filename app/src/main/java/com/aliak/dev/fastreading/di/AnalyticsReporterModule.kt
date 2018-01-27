@@ -1,5 +1,6 @@
 package com.aliak.dev.fastreading.di
 
+import android.app.Application
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter
 import com.aliak.dev.fastreading.analytics.AnalyticsReporterImpl
 import dagger.Module
@@ -10,7 +11,7 @@ import javax.inject.Singleton
 class AnalyticsReporterModule {
     @Singleton
     @Provides
-    fun provideAnalyticsReporter(): AnalyticsReporter {
-        return AnalyticsReporterImpl()
+    fun provideAnalyticsReporter(app: Application): AnalyticsReporter {
+        return AnalyticsReporterImpl(app)
     }
 }

@@ -1,26 +1,25 @@
 package com.aliak.dev.fastreading.di
 
-import com.aliak.dev.fastreading.domain.executor.JobExecutor
-import com.aliak.dev.fastreading.domain.executor.PostExecutionThread
-import com.aliak.dev.fastreading.domain.executor.ThreadExecutor
-import com.aliak.dev.fastreading.domain.executor.UIThread
+import android.app.Application
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 
 @Module
-open class AppModule {
+class AppModule(app: Application) {
+    private val application = app
 
     @Provides
     @Singleton
-    fun provideThreadExecutor(): ThreadExecutor {
-        return JobExecutor()
+    fun provideApplication(): Application {
+        return application
     }
 
     @Provides
     @Singleton
-    fun providePostExecutionThread(): PostExecutionThread {
-        return UIThread()
+    fun provideApplicationContext(): Context {
+        return application.applicationContext
     }
 }
