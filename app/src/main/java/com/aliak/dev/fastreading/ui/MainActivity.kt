@@ -7,7 +7,7 @@ import com.aliak.dev.fastreading.domain.main.MainScreenPresenter
 import com.aliak.dev.fastreading.mvp.MainContract
 import com.aliak.dev.fastreading.ui.base.BaseLifecycleThemedActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import utils.click
+import com.aliak.dev.fastreading.utils.click
 
 class MainActivity : BaseLifecycleThemedActivity<MainContract.Presenter>() {
 

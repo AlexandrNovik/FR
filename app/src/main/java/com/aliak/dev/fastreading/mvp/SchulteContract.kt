@@ -9,22 +9,17 @@ import com.aliak.dev.fastreading.domain.LifecyclePresenter
 interface SchulteContract {
     abstract class Presenter : LifecyclePresenter {
         abstract fun generateSсhulteTable(): List<SchulteCellModel>
-        override fun initialize() {
 
-        }
+        override fun initialize() {}
 
-        override fun resume() {
+        override fun resume() {}
 
-        }
+        override fun pause() {}
 
-        override fun pause() {
-
-        }
-
-        override fun release() {
-
-        }
+        override fun release() {}
 
         abstract fun itemClick(it: SchulteCellModel?)
+
+        abstract fun getColumnCount(): Int
     }
 }

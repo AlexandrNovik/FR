@@ -20,7 +20,7 @@ class SchulteActivity : BaseLifecycleThemedActivity<SchulteContract.Presenter>()
     override fun initView() {
         schulte_grid.adapter = SchulteTableAdapter(this,
                 presenter.generateSсhulteTable().toMutableList())
-        schulte_grid.layoutManager = GridLayoutManager(this, 5)
+        schulte_grid.layoutManager = GridLayoutManager(this, presenter.getColumnCount())
     }
 
     override fun getResId(): Int = R.layout.activity_training_schulte

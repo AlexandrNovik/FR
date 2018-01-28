@@ -1,4 +1,4 @@
-package utils
+package com.aliak.dev.fastreading.utils
 
 import android.graphics.Color
 
