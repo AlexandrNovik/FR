@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Скорочтение</string>
+
+    <!--Main screen-->
+    <string name="training">Тренировки</string>
+    <string name="training_program">Программы тренировок</string>
+    <string name="reading">Чтение</string>
+    <string name="motivation">Мотивация</string>
+
+    <!--Training screen-->
+    <string name="lbl_schulte">Таблица Шульте</string>
+    <string name="lbl_remember_the_number">Запомни число</string>
+    <string name="lbl_line_of_sight">Поле зрения</string>
+    <string name="lbl_speed_reading">Скорость чтения</string>
+    <string name="lbl_word_pairs">Пары слов</string>
+    <string name="lbl_even_numbers">Четные числа</string>
+    <string name="lbl_green_dot">Зеленая точка</string>
+
+    <!--Descriptions-->
+    <string name="description">Описание</string>
+
+    <!--Button-->
+    <string name="btn_start">Начать!</string>
+</resources>
+

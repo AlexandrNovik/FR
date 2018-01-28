@@ -16,5 +16,10 @@
     <string name="lbl_even_numbers">Even numbers</string>
     <string name="lbl_green_dot">Green dot</string>
 
+    <!--Descriptions-->
+    <string name="description">Description</string>
+
+    <!--Button-->
+    <string name="btn_start">Start!</string>
 </resources>
 

@@ -3,6 +3,7 @@ package com.aliak.dev.fastreading.di
 import com.aliak.dev.fastreading.FastReadingApp
 import com.aliak.dev.fastreading.domain.main.MainScreenPresenter
 import com.aliak.dev.fastreading.domain.training.TrainingPresenter
+import com.aliak.dev.fastreading.domain.training.schulte.SchulteDescriptionPresenter
 import com.aliak.dev.fastreading.domain.training.schulte.SchultePresenter
 import com.aliak.dev.fastreading.routing.BaseRouter
 import com.aliak.dev.fastreading.ui.training.TrainingActivity
@@ -27,4 +28,5 @@ interface AppComponent {
     fun inject(activity: TrainingActivity)
     fun inject(holder: SchulteTableHolder)
     fun inject(presenter: SchultePresenter)
+    fun inject(presenter: SchulteDescriptionPresenter)
 }

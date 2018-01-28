@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aliak.dev.fastreading.ui.training.schulte.SchulteDescriptionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/toolbar_elevation"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="?toolbar_popup_theme">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/schulte_description_bottom_container"></ScrollView>
+
+        <LinearLayout
+            android:id="@+id/schulte_description_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/schulte_description_bottom_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/description_start_btn_bottom_margin"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <FrameLayout style="@style/DescriptionOption">
+
+                    <com.afollestad.appthemeengine.inflation.ATETextView
+                        android:id="@+id/schulte_description_5x5_text"
+                        style="@style/DescriptionOptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/text5x5" />
+                </FrameLayout>
+
+                <FrameLayout style="@style/DescriptionOption">
+
+                    <com.afollestad.appthemeengine.inflation.ATETextView
+                        android:id="@+id/schulte_description_6x6_text"
+                        style="@style/DescriptionOptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/description_start_text_left_margin"
+                        android:text="@string/text6x6" />
+                </FrameLayout>
+
+                <FrameLayout style="@style/DescriptionOption">
+
+                    <com.afollestad.appthemeengine.inflation.ATETextView
+                        android:id="@+id/schulte_description_7x7_text"
+                        style="@style/DescriptionOptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/description_start_text_left_margin"
+                        android:text="@string/text7x7" />
+                </FrameLayout>
+
+                <FrameLayout style="@style/DescriptionOption">
+
+                    <com.afollestad.appthemeengine.inflation.ATETextView
+                        android:id="@+id/schulte_description_8x8_text"
+                        style="@style/DescriptionOptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/description_start_text_left_margin"
+                        android:text="@string/text8x8" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/schulte_description_start_btn"
+                style="@style/DescriptionStartButton"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/description_start_btn_bottom_margin"
+                android:layout_weight="1">
+
+                <com.afollestad.appthemeengine.inflation.ATETextView
+                    style="@style/DescriptionStartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_start" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

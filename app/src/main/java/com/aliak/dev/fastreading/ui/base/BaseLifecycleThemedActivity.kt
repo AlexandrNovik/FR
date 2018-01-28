@@ -7,6 +7,7 @@ import com.afollestad.appthemeengine.ATE
 import com.afollestad.appthemeengine.Config
 import com.aliak.dev.fastreading.R
 import com.aliak.dev.fastreading.domain.LifecyclePresenter
+import com.aliak.dev.fastreading.utils.adjustAlpha
 
 abstract class BaseLifecycleThemedActivity<Presenter : LifecyclePresenter> : BaseThemedActivity() {
     lateinit var presenter: Presenter
@@ -59,9 +60,22 @@ abstract class BaseLifecycleThemedActivity<Presenter : LifecyclePresenter> : Bas
         this.setBackgroundColor(Config.accentColor(this@BaseLifecycleThemedActivity, ateKey))
     }
 
+    protected fun View.setPrimaryBackground() {
+        this.setBackgroundColor(Config.primaryColor(this@BaseLifecycleThemedActivity, ateKey))
+    }
+
     protected fun TextView.setAccentTextColor() {
         this.setTextColor(Config.accentColor(this@BaseLifecycleThemedActivity, ateKey))
     }
 
+    protected fun View.setAccentAlphaBackgroundColor(alpha: Float) {
+        this.setBackgroundColor(
+                adjustAlpha(
+                        Config.accentColor(this@BaseLifecycleThemedActivity, ateKey),
+                        alpha)
+        )
+    }
+
     protected fun getAccentColor() = Config.accentColor(this@BaseLifecycleThemedActivity, ateKey)
+    protected fun getPrimaryColor() = Config.accentColor(this@BaseLifecycleThemedActivity, ateKey)
 }

@@ -8,9 +8,11 @@ interface AnalyticsReporter {
         const val EVENT_NAME_SETTINGS = "Settings screen"
         const val EVENT_NAME_TRAINING = "Training screen"
         const val EVENT_NAME_SCHULTE_TRAINING = "Schulte screen"
+        const val EVENT_NAME_SCHULTE_DESCRIPTION = "Schulte description screen"
     }
 
     fun reportNavigationSettings()
     fun reportNavigationTraining()
     fun reportNavigationSchulteTraining()
+    fun reportNavigationSchulteDescription()
 }

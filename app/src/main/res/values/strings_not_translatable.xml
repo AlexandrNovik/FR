@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text5x5">5x5</string>
+    <string name="text6x6">6x6</string>
+    <string name="text7x7">7x7</string>
+    <string name="text8x8">8x8</string>
+</resources>

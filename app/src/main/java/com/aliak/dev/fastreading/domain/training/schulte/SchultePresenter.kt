@@ -24,11 +24,11 @@ class SchultePresenter : SchulteContract.Presenter() {
 
     override fun generateSсhulteTable(): List<SchulteCellModel> {
         val list = ArrayList<SchulteCellModel>()
-        val schulteSize = getColumnCount() * preferences.getSchulteRowValue()
-        (1..schulteSize).mapTo(list) { SchulteCellModel(it) }
+        val schulteSize = Math.pow(getSchulteSize().toDouble(), 2.toDouble())
+        (1..schulteSize.toInt()).mapTo(list) { SchulteCellModel(it) }
         return list.apply { shuffle() }
     }
 
-    override fun getColumnCount(): Int = preferences.getSchulteColumnValue()
+    override fun getSchulteSize(): Int = preferences.getSchulteTableValue()
 
 }

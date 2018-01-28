@@ -13,5 +13,6 @@ interface Router {
 
     interface Training {
         fun navigateSchulteTraining(context: Context)
+        fun navigateSchulteDescription(context: Context)
     }
 }

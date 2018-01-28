@@ -20,6 +20,6 @@ interface SchulteContract {
 
         abstract fun itemClick(it: SchulteCellModel?)
 
-        abstract fun getColumnCount(): Int
+        abstract fun getSchulteSize(): Int
     }
 }

@@ -1,4 +1,4 @@
-package com.aliak.dev.fastreading.ui.training
+package com.aliak.dev.fastreading.ui.training.schulte
 
 import android.support.v7.widget.GridLayoutManager
 import com.aliak.dev.fastreading.R
@@ -20,7 +20,7 @@ class SchulteActivity : BaseLifecycleThemedActivity<SchulteContract.Presenter>()
     override fun initView() {
         schulte_grid.adapter = SchulteTableAdapter(this,
                 presenter.generateSсhulteTable().toMutableList())
-        schulte_grid.layoutManager = GridLayoutManager(this, presenter.getColumnCount())
+        schulte_grid.layoutManager = GridLayoutManager(this, presenter.getSchulteSize())
     }
 
     override fun getResId(): Int = R.layout.activity_training_schulte

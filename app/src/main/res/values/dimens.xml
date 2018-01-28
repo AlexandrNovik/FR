@@ -4,4 +4,8 @@
     <dimen name="content_inset">16dp</dimen>
     <dimen name="toolbar_elevation">8dp</dimen>
     <dimen name="training_item_height">82dp</dimen>
+
+    <dimen name="description_start_btn_bottom_margin">2dp</dimen>
+    <dimen name="description_start_text_left_margin">2dp</dimen>
+    <dimen name="schulte_description_bottom_height">102dp</dimen>
 </resources>

@@ -14,7 +14,7 @@ class TrainingPresenter : TrainingContract.Presenter() {
 
     override fun itemClick(model: TrainingModel, context: Context) {
         when (model) {
-            is SchulteTraining -> routerTraining.navigateSchulteTraining(context)
+            is SchulteTraining -> routerTraining.navigateSchulteDescription(context)
         }
     }
 
