@@ -3,6 +3,7 @@ package com.aliak.dev.fastreading.analytics
 import android.content.Context
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.ATTRIBUTES_APP_VERSION
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.EVENT_NAME_SCHULTE_DESCRIPTION
+import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.EVENT_NAME_SCHULTE_RESULT
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.EVENT_NAME_SCHULTE_TRAINING
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.EVENT_NAME_SETTINGS
 import com.aliak.dev.fastreading.analytics.AnalyticsReporter.Companion.EVENT_NAME_TRAINING
@@ -38,6 +39,10 @@ class AnalyticsReporterImpl(context: Context) : AnalyticsReporter {
 
     override fun reportNavigationSchulteDescription() {
         reportNavigationEvent(EVENT_NAME_SCHULTE_DESCRIPTION)
+    }
+
+    override fun reportNavigationSchulteResult() {
+        reportNavigationEvent(EVENT_NAME_SCHULTE_RESULT)
     }
 
 }

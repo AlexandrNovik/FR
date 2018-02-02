@@ -8,6 +8,7 @@ import rx.Subscription
 import rx.observers.Subscribers
 import rx.schedulers.Schedulers
 import rx.subscriptions.Subscriptions
+import timber.log.Timber
 import java.util.concurrent.Executor
 
 /**
@@ -51,4 +52,25 @@ abstract class UseCase<in ParamType, ResultType> protected constructor(
             subscription.unsubscribe()
         }
     }
+
+    class UseCaseSubscriber<ResultType>(private val next: (value: ResultType) -> Unit,
+                                        private val error: (e: Throwable) -> Unit =
+                                        {
+                                            Timber.e(it.message)
+                                        },
+                                        private val complete: () -> Unit = {})
+        : Subscriber<ResultType>() {
+        override fun onNext(t: ResultType) {
+            next(t)
+        }
+
+        override fun onCompleted() {
+            complete()
+        }
+
+        override fun onError(e: Throwable?) {
+            e?.let { error(it) }
+        }
+    }
+
 }

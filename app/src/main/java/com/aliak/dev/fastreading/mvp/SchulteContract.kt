@@ -7,6 +7,10 @@ import com.aliak.dev.fastreading.domain.LifecyclePresenter
  * @author Aliaksandr Novik
  */
 interface SchulteContract {
+    interface View {
+        fun close()
+    }
+
     abstract class Presenter : LifecyclePresenter {
         abstract fun generateSсhulteTable(): List<SchulteCellModel>
 

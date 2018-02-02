@@ -10,7 +10,7 @@ import javax.inject.Inject
 /**
  * @author Aliaksandr Novik
  */
-class PickSchulteCellUseCase
+class SchultePickCellUseCase
 @Inject constructor(threadExecutor: ThreadExecutor,
                     postExecutionThread: PostExecutionThread,
                     private val schulteManager: SchulteManager)

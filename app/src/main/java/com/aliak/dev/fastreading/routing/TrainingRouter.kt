@@ -17,4 +17,8 @@ class TrainingRouter : BaseRouter(), Router.Training {
         analytics.reportNavigationSchulteDescription()
         context.startActivity(Intent(context, SchulteDescriptionActivity::class.java))
     }
+    override fun navigateSchulteResult(context: Context) {
+        analytics.reportNavigationSchulteResult()
+        // TODO
+    }
 }

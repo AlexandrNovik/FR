@@ -12,10 +12,13 @@ import rx.subscriptions.CompositeSubscription
 /**
  * @author Aliaksandr Novik
  */
-class SchulteActivity : BaseLifecycleThemedActivity<SchulteContract.Presenter>() {
+class SchulteActivity :
+        BaseLifecycleThemedActivity<SchulteContract.Presenter>(),
+        SchulteContract.View {
+
     private val subscription = CompositeSubscription()
 
-    override fun initPresenter(): SchulteContract.Presenter = SchultePresenter()
+    override fun initPresenter(): SchulteContract.Presenter = SchultePresenter(this)
 
     override fun initView() {
         schulte_grid.adapter = SchulteTableAdapter(this,
@@ -36,5 +39,9 @@ class SchulteActivity : BaseLifecycleThemedActivity<SchulteContract.Presenter>()
     override fun onPause() {
         super.onPause()
         subscription.clear()
+    }
+
+    override fun close() {
+        finish()
     }
 }
